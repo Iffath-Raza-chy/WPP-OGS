@@ -17,6 +17,7 @@
 	<title>Eat Fresh </title>
 	<link rel="stylesheet" href="css/Eat_Fresh.css"/>
 	<link rel="stylesheet" href="Font/css/all.min.css"/>
+	<script src="Cart.js" async></script>
 <script> 
 	function stickyMenu(){
 		var stick=document.getElementById('sticky'); 
@@ -53,8 +54,10 @@ window.onscroll=function(){
 			</form>
 		</div>
 			<ul class="cart-btn">
-				<button style="font-size:24px;color:#f7e736">Cart <i class="fa fa-shopping-cart"></i></button>
-			<ul/>
+				<a href="Cart.php">
+				<button style="font-size:24px;color:white"><i class="fa fa-shopping-cart"></i></button>
+				</a>
+			</ul>
 		
 	</div>
 <!--Home Page Begins-->
@@ -114,9 +117,9 @@ window.onscroll=function(){
 				</div>
 				<div class="description">
 					<b>Organic Okra</b><br/>
-					<div class="item-select">
+					<span class="item-select">
 						Price: $2.99/250grams
-					</div>
+					</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -124,7 +127,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn" > Add to Cart </button>
 				</div>
 			</div>
 			<div class="items">
@@ -133,9 +137,9 @@ window.onscroll=function(){
 				</div>
 				<div class="description">
 					<b>Organic Greenpepper</b><br/>
-					<div class="item-select">
+					<span class="item-select">
 						Price: $3.99/250grams
-					</div>
+					</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -143,7 +147,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -162,7 +167,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -181,7 +187,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -200,7 +207,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -219,7 +227,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			
@@ -246,7 +255,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -265,7 +275,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -284,7 +295,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -303,7 +315,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -322,7 +335,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -341,7 +355,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			
@@ -368,7 +383,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -387,7 +403,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -406,7 +423,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -425,7 +443,8 @@ window.onscroll=function(){
 						<option>7000 grams</option>
 						<option>1000 grams</option>
 					</select><br/>
-					<button class="buynow-btn"> Buy Now<button/>
+					<button class="buynow-btn"> Buy Now</button>
+					<button class="buynow-btn"> Add to Cart</button>
 				</div>
 			</div>
 			

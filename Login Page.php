@@ -39,8 +39,10 @@ window.onscroll=function(){
 			<button type ="submit"><i class="fa fa-search"></i></button>
 			</form>
 		</div>
-			<ul class="cart-btn">
-				<button style="font-size:24px;color:#f7e736">Cart <i class="fa fa-shopping-cart"></i></button>
+		<ul class="cart-btn">
+				<a href="Cart.php">
+				<button style="font-size:24px;color:white"><i class="fa fa-shopping-cart"></i></button>
+				</a>
 			</ul>
 		</div>
 		<div class="form-box">
@@ -87,8 +89,6 @@ window.onscroll=function(){
 			z.style.left = "0";
 		}
 	</script>
-
-	
 
 
 	</body>

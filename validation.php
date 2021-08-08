@@ -18,9 +18,9 @@
     header('location:Eat_Fresh.php');
   }
   else{
-
-    echo "Wrong Credential";
-    header('location:Login Page.php');
+    echo '<script>alert("Wrong Credential")
+    window.location = "Login Page.php";
+    </script>';
     
   }
 

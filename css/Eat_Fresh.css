@@ -51,7 +51,7 @@ body{
 }
 
 .a-menu, .a-links{
-	text decoration:none;
+	text-decoration:none;
 	color:white;
 }
 
@@ -83,7 +83,7 @@ body{
 	margin:15px 0 0 10px;
 }
 .cart-btn:hover{
-	border-radius:20%;
+	border-radius:10%;
 	background:#4b8c5a;
 	box-shadow:0 0 0 8px #5b8c5a;
 	border:5px solid #5b8c5a;
@@ -134,7 +134,7 @@ button{
 
 .container, .deals-container{
 	margin: 50px 50px 50px 5%;
-	witdth:90%;
+	width:90%;
 	text-align:center;
 }
 
