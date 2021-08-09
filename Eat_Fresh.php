@@ -16,6 +16,7 @@
 <head>
 	<title>Eat Fresh </title>
 	<link rel="stylesheet" href="css/Eat_Fresh.css"/>
+	<link rel="stylesheet" href="css/Cart.css"/>
 	<link rel="stylesheet" href="Font/css/all.min.css"/>
 	<script src="Cart.js" async></script>
 <script> 
@@ -39,7 +40,7 @@ window.onscroll=function(){
 		<!-- <button  type="button" class="button2">Logi in/Sign up</button> -->
 		<div class="page-title">Grocery Mart</div>
 	</div>
-	<div class="menu" id="sticky">
+	<nav class="menu" id="sticky">
 		<ul class="menu-ul">
 			<a href="#" class="a-menu"><li>Home</li></a>
 			<a href="#deals" class="a-menu"><li>Deals</li></a>
@@ -54,14 +55,18 @@ window.onscroll=function(){
 			</form>
 		</div>
 			<ul class="cart-btn">
-				<a href="Cart.php">
-				<button style="font-size:24px;color:white"><i class="fa fa-shopping-cart"></i></button>
+				<a>
+					<button style="font-size:24px;color:white"><i class="fa fa-shopping-cart"></i>
+						<li>
+
+						</li>
+					</button>
+				
 				</a>
 			</ul>
-		
-	</div>
+</nav>
 <!--Home Page Begins-->
-	<div class="container">
+	<div class="containerh">
 		<a href="#vegetables">
 			<div class="categories">
 				<img src="images/Types/Vegetables.jpg" class="item-image"/>
@@ -88,7 +93,7 @@ window.onscroll=function(){
 		</a>
 	</div>
 		<!--Deal Begins Here-->
-		<div class="deals-container" id="deals"> 
+		<div class="deals-containerh" id="deals"> 
 			<div class="parallax">
 				<div class="title">DEALS</div>
 			</div>
@@ -107,19 +112,19 @@ window.onscroll=function(){
 		</div>
  		<!--Deal Ends Here-->
 		<!--Veg Begins Here-->
-		<div class="deals-container" id="vegetables">
+		<div class="deals-containerh" id="vegetables">
 			<div class="parallax">
 				<div class="title">VEGETABLES</div>
 			</div>
 			<div class="items">
-				<div class="images">
+				<span class="images">
 					<img src="Images/Vegs/Okra.jpg" class="item-image-size"/>
-				</div>
+				</span>
 				<div class="description">
-					<b>Organic Okra</b><br/>
-					<span class="item-select">
-						Price: $2.99/250grams
-					</span></br>
+					<b class="item-name">Organic Okra</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$2.99</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -128,7 +133,7 @@ window.onscroll=function(){
 						<option>1000 grams</option>
 					</select><br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn" > Add to Cart </button>
+					<button class="buynow-btn"> Add to Cart </button>
 				</div>
 			</div>
 			<div class="items">
@@ -136,10 +141,10 @@ window.onscroll=function(){
 					<img src="Images/Vegs/Greenpepper.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Organic Greenpepper</b><br/>
-					<span class="item-select">
-						Price: $3.99/250grams
-					</span></br>
+					<b class="item-name">Organic Greenpepper</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$3.99</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -148,7 +153,7 @@ window.onscroll=function(){
 						<option>1000 grams</option>
 					</select><br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type="button"> Add to Cart</button>
 				</div>
 			</div>
 			<div class="items">
@@ -156,10 +161,10 @@ window.onscroll=function(){
 					<img src="Images/Vegs/Tomatoes.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Organic Tomatoes</b><br/>
-					<div class="item-select">
-						Price: $1.49/250grams
-					</div>
+					<b class="item-name">Organic Tomatoes</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$1.49</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -176,10 +181,10 @@ window.onscroll=function(){
 					<img src="Images/Vegs/Onions.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Yellow Onions</b><br/>
-					<div class="item-select">
-						Price: $1.29/250grams
-					</div>
+					<b class="item-name">Yellow Onions</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$1.29</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -196,10 +201,10 @@ window.onscroll=function(){
 					<img src="Images/Vegs/Spinach.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Organic Spinach</b><br/>
-					<div class="item-select">
-						Price: $3.99/250grams
-					</div>
+					<b class="item-name">Organic Spinach</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$3.99</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -216,10 +221,10 @@ window.onscroll=function(){
 					<img src="Images/Vegs/Carrots.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Organic Carrots</b><br/>
-					<div class="item-select">
-						Price: $4.99/250grams
-					</div>
+					<b class="item-name">Organic Carrots</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$4.99</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -235,7 +240,7 @@ window.onscroll=function(){
 		</div>
  		<!--Veg Ends Here-->
 		<!--Fruits Begins Here-->
-		<div class="deals-container" id="fruits">
+		<div class="deals-containerh" id="fruits">
 			<div class="parallax">
 				<div class="title">FRUITS</div>
 			</div>
@@ -244,10 +249,10 @@ window.onscroll=function(){
 					<img src="Images/Fruits/Apples.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Organic Apple</b><br/>
-					<div class="item-select">
-						Price: $5.99/250grams
-					</div>
+					<b class="item-name">Organic Apple</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$5.99</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -264,10 +269,10 @@ window.onscroll=function(){
 					<img src="Images/Fruits/Kiwi.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Organic Kiwi</b><br/>
-					<div class="item-select">
-						Price: $7.99/250grams
-					</div>
+					<b class="item-name">Organic Kiwi</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$7.99</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -284,10 +289,10 @@ window.onscroll=function(){
 					<img src="Images/Fruits/Dragonfruit.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Organic Dragon Fruit</b><br/>
-					<div class="item-select">
-						Price: $8.49/250grams
-					</div>
+					<b class="item-name">Organic Dragon Fruit</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$8.49</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -304,10 +309,10 @@ window.onscroll=function(){
 					<img src="Images/Fruits/Strawberries.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Strawberries</b><br/>
-					<div class="item-select">
-						Price: $4.99/250grams
-					</div>
+					<b class="item-name">Strawberries</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$4.89</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -324,10 +329,10 @@ window.onscroll=function(){
 					<img src="Images/Fruits/Watermelons.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Watermelon</b><br/>
-					<div class="item-select">
-						Price: $3.99/250grams
-					</div>
+					<b class="item-name">Watermelon</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$3.79</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -344,10 +349,10 @@ window.onscroll=function(){
 					<img src="Images/Fruits/Bananas.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Organic Bananas</b><br/>
-					<div class="item-select">
-						Price: $1.99/250grams
-					</div>
+					<b class="item-name">Organic Bananas</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$1.29</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -363,7 +368,7 @@ window.onscroll=function(){
 		</div>
  		<!--Fruits Ends Here-->
  		<!--Meat Begins Here-->
-		<div class="deals-container" id="meat">
+		<div class="deals-containerh" id="meat">
 			<div class="parallax">
 				<div class="title">MEAT &SEAFOOD</div>
 			</div>
@@ -372,10 +377,10 @@ window.onscroll=function(){
 					<img src="Images/Meats/Chicken.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Whole Chicken</b><br/>
-					<div class="item-select">
-						Price: $3.99/250grams
-					</div>
+					<b class="item-name">Whole Chicken</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$3.98</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -392,10 +397,10 @@ window.onscroll=function(){
 					<img src="Images/Meats/Lamb.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Fresh Lamb</b><br/>
-					<div class="item-select">
-						Price: $7.99/250grams
-					</div>
+					<b class="item-name">Fresh Lamb</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$7.99</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -412,10 +417,10 @@ window.onscroll=function(){
 					<img src="Images/Meats/Prawns.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Peeled Prawns</b><br/>
-					<div class="item-select">
-						Price: $8.49/250grams
-					</div>
+					<b class="item-name">Peeled Prawns</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$8.49</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -432,10 +437,10 @@ window.onscroll=function(){
 					<img src="Images/Meats/Fish.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b>Live Fish</b><br/>
-					<div class="item-select">
-						Price: $7.89/250grams
-					</div>
+					<b class="item-name">Live Fish</b><br/>
+					<span class="item-select">Price:</span>
+					<span class="shop-item-price">$7.89</span>
+					<span>/ 250grams</span></br>
 					<label>Qty:</label>
 					<select class="item-select">
 						<option>250 grams</option>
@@ -481,8 +486,10 @@ window.onscroll=function(){
 	</div>
 	<div class= "copyrights">
 		<i class="Far fa-copyright fa-lx"><i/>2021 By Iffath Raza Chowdhury
-	<div/>
+</div>
 <!--footer End here-->
+
+
 
 </body>
 </html>

@@ -132,7 +132,7 @@ button{
 	outline:none;
 }
 
-.container, .deals-container{
+.containerh, .deals-containerh{
 	margin: 50px 50px 50px 5%;
 	width:90%;
 	text-align:center;
