@@ -4,7 +4,6 @@
 <html>
 <head>
 	<title>Eat Fresh </title>
-	<link rel="stylesheet" href="css/Eat_Fresh.css"/>
 	<link rel="stylesheet" href="css/Login Page.css"/>
 	<link rel="stylesheet" href="Font/css/all.min.css"/>
 <script> 
@@ -40,8 +39,15 @@ window.onscroll=function(){
 			</form>
 		</div>
 		<ul class="cart-btn">
-				<a href="Cart.php">
-				<button style="font-size:24px;color:white"><i class="fa fa-shopping-cart"></i></button>
+				<a href="Cart Page.php">
+				<?php
+					$count=0;
+					if(isset($_SESSION['cart']))
+					{
+						$count=count($_SESSION['cart']);
+					}
+					?>
+				<button style="font-size:24px;color:white"><i class="fa fa-shopping-cart">(<?php echo $count; ?>)</i></button>
 				</a>
 			</ul>
 		</div>
@@ -66,7 +72,7 @@ window.onscroll=function(){
 				<input type="text" class="input-feild" placeholder="User ID" name = "userName" required>
 				<input type="email" class="input-feild" placeholder="Email ID" name = "userEmail"  required>
 				<input type="text" class="input-feild" placeholder="Enter Password" name = "userPassword" required>
-				<input type="checkbox" class="chech-box"><span>I agree to the terms & condiotions</span>
+				<input type="checkbox" class="chech-box" required><span>I agree to the terms & condiotions</span>
 				<button type="submit" class="submit-btn">Register</button>
 			</form>
 		</div>

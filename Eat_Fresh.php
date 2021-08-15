@@ -16,9 +16,7 @@
 <head>
 	<title>Eat Fresh </title>
 	<link rel="stylesheet" href="css/Eat_Fresh.css"/>
-	<link rel="stylesheet" href="css/Cart.css"/>
 	<link rel="stylesheet" href="Font/css/all.min.css"/>
-	<script src="Cart.js" async></script>
 <script> 
 	function stickyMenu(){
 		var stick=document.getElementById('sticky'); 
@@ -34,7 +32,6 @@ window.onscroll=function(){
 }
 </script>
 </head>
-
 <body>
 	<div class="parallax">
 		<!-- <button  type="button" class="button2">Logi in/Sign up</button> -->
@@ -56,11 +53,16 @@ window.onscroll=function(){
 		</div>
 			<ul class="cart-btn">
 				<a>
-					<button style="font-size:24px;color:white"><i class="fa fa-shopping-cart"></i>
-						<li>
+					<?php
+					$count=0;
+					if(isset($_SESSION['cart']))
+					{
+						$count=count($_SESSION['cart']);
+					}
+					?>
 
-						</li>
-					</button>
+					<a href="Cart Page.php" style="font-size:24px;color:white" ><i class="fa fa-shopping-cart">(<?php echo $count; ?>)</i>
+				</a>
 				
 				</a>
 			</ul>
@@ -116,126 +118,109 @@ window.onscroll=function(){
 			<div class="parallax">
 				<div class="title">VEGETABLES</div>
 			</div>
-			<div class="items">
+			<form class="items" action="Manage Cart.php" method="POST">
 				<span class="images">
 					<img src="Images/Vegs/Okra.jpg" class="item-image-size"/>
 				</span>
 				<div class="description">
 					<b class="item-name">Organic Okra</b><br/>
-					<span class="item-select">Price:</span>
+					<span class="p">Price:</span>
 					<span class="shop-item-price">$2.99</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart </button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Organic Okra">
+					<input type="hidden" name="Price" value="2.99">
+					<input type="hidden" name="Weight" value="250g">
 				</div>
-			</div>
-			<div class="items">
+			</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Vegs/Greenpepper.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Organic Greenpepper</b><br/>
+					<b class="item-name" name = "product-name">Organic Greenpepper</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$3.99</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$3.99</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn" type="button"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Organic Greenpepper">
+					<input type="hidden" name="Price" value="3.99">
 				</div>
-			</div>
-			<div class="items">
+			</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Vegs/Tomatoes.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Organic Tomatoes</b><br/>
+					<b class="item-name" name = "product-name">Organic Tomatoes</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$1.49</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$1.49</span>
+				 </br>
+					<label> Weight: 250 Grams</label>
+				</br>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Organic Tomatoes">
+					<input type="hidden" name="Price" value="1.49">
 				</div>
-			</div>
-			<div class="items">
+			</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Vegs/Onions.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Yellow Onions</b><br/>
+					<b class="item-name" name = "product-name">Yellow Onions</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$1.29</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$1.29</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Yellow Onions">
+					<input type="hidden" name="Price" value="1.29">
 				</div>
-			</div>
-			<div class="items">
+			</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Vegs/Spinach.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Organic Spinach</b><br/>
+					<b class="item-name" name = "product-name">Organic Spinach</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$3.99</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$3.99</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Organic Spinach">
+					<input type="hidden" name="Price" value="3.99">
 				</div>
-			</div>
-			<div class="items">
+			</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Vegs/Carrots.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Organic Carrots</b><br/>
+					<b class="item-name" name = "product-name">Organic Carrots</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$4.99</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$4.99</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Organic Carrots">
+					<input type="hidden" name="Price" value="4.99">
 				</div>
-			</div>
+			</form>
 			
 		</div>
  		<!--Veg Ends Here-->
@@ -244,126 +229,108 @@ window.onscroll=function(){
 			<div class="parallax">
 				<div class="title">FRUITS</div>
 			</div>
-			<div class="items">
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Fruits/Apples.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Organic Apple</b><br/>
+					<b class="item-name" name = "product-name">Organic Apple</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$5.99</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$5.99</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Organic Apple">
+					<input type="hidden" name="Price" value="5.99">
 				</div>
-			</div>
-			<div class="items">
+			</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Fruits/Kiwi.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Organic Kiwi</b><br/>
+					<b class="item-name" name = "product-name">Organic Kiwi</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$7.99</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$7.99</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Organic Kiwi">
+					<input type="hidden" name="Price" value="7.99">
 				</div>
-			</div>
-			<div class="items">
+			</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Fruits/Dragonfruit.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Organic Dragon Fruit</b><br/>
+					<b class="item-name" name = "product-name">Organic Dragon Fruit</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$8.49</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$8.49</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Organic Dragon Fruit">
+					<input type="hidden" name="Price" value="8.49">
 				</div>
-			</div>
-			<div class="items">
+			</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Fruits/Strawberries.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Strawberries</b><br/>
+					<b class="item-name" name = "product-name">Strawberries</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$4.89</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$4.89</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Strawberries">
+					<input type="hidden" name="Price" value="4.89">
 				</div>
-			</div>
-			<div class="items">
+			</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Fruits/Watermelons.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Watermelon</b><br/>
+					<b class="item-name" name = "product-name">Watermelon</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$3.79</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$3.79</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Watermelon">
+					<input type="hidden" name="Price" value="3.79">
 				</div>
-			</div>
-			<div class="items">
+			</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Fruits/Bananas.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Organic Bananas</b><br/>
+					<b class="item-name" name = "product-name">Organic Bananas</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$1.29</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$1.29</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Organic Bananas">
+					<input type="hidden" name="Price" value="1.29">
 				</div>
-			</div>
+			</form>
 			
 		</div>
  		<!--Fruits Ends Here-->
@@ -372,91 +339,80 @@ window.onscroll=function(){
 			<div class="parallax">
 				<div class="title">MEAT &SEAFOOD</div>
 			</div>
-			<div class="items">
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Meats/Chicken.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Whole Chicken</b><br/>
+					<b class="item-name" name = "product-name">Whole Chicken</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$3.98</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$3.98</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Whole Chicken">
+					<input type="hidden" name="Price" value="3.98">
 				</div>
-			</div>
-			<div class="items">
+			</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Meats/Lamb.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Fresh Lamb</b><br/>
+					<b class="item-name" name = "product-name">Fresh Lamb</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$7.99</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$7.99</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Fresh Lamb">
+					<input type="hidden" name="Price" value="7.99">
 				</div>
-			</div>
-			<div class="items">
+			</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Meats/Prawns.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Peeled Prawns</b><br/>
+					<b class="item-name" name = "product-name">Peeled Prawns</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$8.49</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$8.49</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Peeled Prawns">
+					<input type="hidden" name="Price" value="8.49">
 				</div>
-			</div>
-			<div class="items">
+				</form>
+			<form class="items" action="Manage Cart.php" method="POST">
 				<div class="images">
 					<img src="Images/Meats/Fish.jpg" class="item-image-size"/>
 				</div>
 				<div class="description">
-					<b class="item-name">Live Fish</b><br/>
+					<b class="item-name" name = "product-name">Live Fish</b><br/>
 					<span class="item-select">Price:</span>
-					<span class="shop-item-price">$7.89</span>
-					<span>/ 250grams</span></br>
-					<label>Qty:</label>
-					<select class="item-select">
-						<option>250 grams</option>
-						<option>500 grams</option>
-						<option>7000 grams</option>
-						<option>1000 grams</option>
-					</select><br/>
+					<span class="shop-item-price" name ="product-price">$7.89</span>
+				 </br>
+					<label>Weight: 250 Grams</label>
+					<br/>
 					<button class="buynow-btn"> Buy Now</button>
-					<button class="buynow-btn"> Add to Cart</button>
+					<button class="buynow-btn" type ="submit" name="Add_To_Cart"> Add to Cart </button>
+					<input type="hidden" name="item_namee" value="Live Fish">
+					<input type="hidden" name="Price" value="7.89">
 				</div>
-			</div>
+				</form>
 			
 		</div>
  		<!--Veg Ends Here-->
-	
+
 <!--Home Page End-->
+
 <!--footer starts here-->
 	<div class="parallaxl">
 		<div class="footer">
