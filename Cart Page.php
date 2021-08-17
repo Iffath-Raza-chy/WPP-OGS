@@ -15,7 +15,6 @@ if (!isset($_SESSION['userName']))
 
   <title>Eat Fresh </title>
   <link rel="stylesheet" href="css/Eat_Fresh.css" />
-  <link rel="stylesheet" href="css/Login Page.css" />
   <link rel="stylesheet" href="Font/css/all.min.css" />
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -80,7 +79,7 @@ if (!isset($_SESSION['userName']))
       <br>
       <br>
     </div>
-    <div class="container border bg-light rounded p-4">
+    <div class="container border bg-light rounded p-4"><p class="text-center "style="font-size:2.5vw">My Cart</p>
 
       <div class="row">
         <div class="col-lg-9">
