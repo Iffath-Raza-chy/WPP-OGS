@@ -1,56 +1,67 @@
 <?php
-	session_start();
+session_start();
 ?>
 <html>
+
 <head>
 	<title>Eat Fresh </title>
-	<link rel="stylesheet" href="css/Login Page.css"/>
-	<link rel="stylesheet" href="Font/css/all.min.css"/>
-<script> 
-	function stickyMenu(){
-		var stick=document.getElementById('sticky'); 
-		if (window.pageYOffset>200){
-			sticky.classList.add('sticky');
+	<link rel="stylesheet" href="css/Login Page.css" />
+	<link rel="stylesheet" href="Font/css/all.min.css" />
+	<script>
+		function stickyMenu() {
+			var stick = document.getElementById('sticky');
+			if (window.pageYOffset > 200) {
+				sticky.classList.add('sticky');
+			} else {
+				sticky.classList.remove('sticky');
+			}
 		}
-		else{ 
-			sticky.classList.remove('sticky');
+		window.onscroll = function() {
+			stickyMenu();
 		}
-	}
-window.onscroll=function(){
-	stickyMenu();
-}
-</script>
+	</script>
 </head>
+
 <body>
 	<div class="parallax">
 		<div class="page-title">Grocery Mart</div>
-	<div class="menu" id="sticky">
-		<ul class="menu-ul">
-			<a href="Eat_Fresh.php#" class="a-menu"><li>Home</li></a>
-			<a href="Eat_Fresh.php#deals" class="a-menu"><li>Deals</li></a>
-			<a href="Eat_Fresh.php#vegetables" class="a-menu"><li>Vegetables</li></a>
-			<a href="Eat_Fresh.php#fruits" class="a-menu"><li>Fruits</li></a>
-			<a href="Eat_Fresh.php#meat" class="a-menu"><li>Meat</li></a>
-		</ul>
-		<div class="search-box">
-			<form>
-			<input type="text" placeholder="Search..." name = "search" class="search-input"/>
-			<button type ="submit"><i class="fa fa-search"></i></button>
-			</form>
-		</div>
-		<ul class="cart-btn">
+		<div class="menu" id="sticky">
+			<ul class="menu-ul">
+				<a href="Eat_Fresh.php#" class="a-menu">
+					<li>Home</li>
+				</a>
+				<a href="Eat_Fresh.php#deals" class="a-menu">
+					<li>Deals</li>
+				</a>
+				<a href="Eat_Fresh.php#vegetables" class="a-menu">
+					<li>Vegetables</li>
+				</a>
+				<a href="Eat_Fresh.php#fruits" class="a-menu">
+					<li>Fruits</li>
+				</a>
+				<a href="Eat_Fresh.php#meat" class="a-menu">
+					<li>Meat</li>
+				</a>
+			</ul>
+			<div class="search-box">
+				<form>
+					<input type="text" placeholder="Search..." name="search" class="search-input" />
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			<ul class="menu-ul">
 				<a href="Cart Page.php">
-				<?php
-					$count=0;
-					if(isset($_SESSION['cart']))
-					{
-						$count=count($_SESSION['cart']);
+					<?php
+					$count = 0;
+					if (isset($_SESSION['cart'])) {
+						$count = count($_SESSION['cart']);
 					}
 					?>
-				<button style="font-size:24px;color:white"><i class="fa fa-shopping-cart">(<?php echo $count; ?>)</i></button>
+				<a href="Cart Page.php" style="font-size:24px;color:white" ><li class="fa fa-shopping-cart">(<?php echo $count; ?>)</li>
 				</a>
 			</ul>
 		</div>
+		
 		<div class="form-box">
 			<div class="button-box">
 				<div id="btn"></div>
@@ -63,17 +74,17 @@ window.onscroll=function(){
 				<img src="Images/Png/gp.png">
 			</div>
 			<form method="POST" action="validation.php" id="login" class="input-group">
-				<input type="text" class="input-feild" placeholder="User ID" name = "userName" required>
+				<input type="text" class="input-feild" placeholder="User ID" name="userName" required>
 				<input type="password" class="input-feild" placeholder="Enter Password" name="userPassword" required>
 				<input type="checkbox" class="chech-box"><span>Remember Password</span>
-				<button type="submit" class="submit-btn" name="Login" >Log in</button>
+				<button type="submit" class="submit-btn" name="Login">Log in</button>
 			</form>
-			<form method = "post" action="registration.php" id="register" class="input-group">
-				
-				<input type="text" class="input-feild" placeholder="Full Name" name = "Fullname" required>
-				<input type="text" class="input-feild" placeholder="User ID" name = "userName" required>
-				<input type="email" class="input-feild" placeholder="Email ID" name = "userEmail"  required>
-				<input type="text" class="input-feild" placeholder="Enter Password" name = "userPassword" required>
+			<form method="post" action="registration.php" id="register" class="input-group">
+
+				<input type="text" class="input-feild" placeholder="Full Name" name="Fullname" required>
+				<input type="text" class="input-feild" placeholder="User ID" name="userName" required>
+				<input type="email" class="input-feild" placeholder="Email ID" name="userEmail" required>
+				<input type="text" class="input-feild" placeholder="Enter Password" name="userPassword" required>
 				<input type="checkbox" class="chech-box" required><span>I agree to the terms & condiotions</span>
 				<button type="submit" class="submit-btn">Register</button>
 			</form>
@@ -86,12 +97,14 @@ window.onscroll=function(){
 		var x = document.getElementById("login");
 		var y = document.getElementById("register");
 		var z = document.getElementById("btn");
-		function register(){
+
+		function register() {
 			x.style.left = "-400px";
 			y.style.left = "50px";
 			z.style.left = "110px";
 		}
-		function login(){
+
+		function login() {
 			x.style.left = "50px";
 			y.style.left = "450px";
 			z.style.left = "0";
@@ -99,5 +112,6 @@ window.onscroll=function(){
 	</script>
 
 
-	</body>
-	</html>
+</body>
+
+</html>

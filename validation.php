@@ -33,7 +33,7 @@
         position: 'center',
         icon: 'success',
         title: 'Login Success',
-        text: 'Welcome <?php echo $_SESSION['userName']?> ',
+        text: 'Welcome <?php echo $_SESSION['userName'] ?> ',
         showConfirmButton: false,
         timer: 1700
       }).then(function() {
@@ -47,7 +47,7 @@
   ?>
     <script>
       swal.fire("Wrong Credential!",
-       "Please Enter Correct Information",
+        "Please Enter Correct Information",
         "error").then(function() {
         window.location = "Login Page.php";
       });

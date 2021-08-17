@@ -17,6 +17,7 @@
 	<title>Eat Fresh </title>
 	<link rel="stylesheet" href="css/Eat_Fresh.css"/>
 	<link rel="stylesheet" href="Font/css/all.min.css"/>
+	
 <script> 
 	function stickyMenu(){
 		var stick=document.getElementById('sticky'); 
@@ -51,7 +52,7 @@ window.onscroll=function(){
 			<button type ="submit"><i class="fa fa-search"></i></button>
 			</form>
 		</div>
-			<ul class="cart-btn">
+			<ul class="menu-ul">
 				<a>
 					<?php
 					$count=0;
@@ -60,8 +61,7 @@ window.onscroll=function(){
 						$count=count($_SESSION['cart']);
 					}
 					?>
-
-					<a href="Cart Page.php" style="font-size:24px;color:white" ><i class="fa fa-shopping-cart">(<?php echo $count; ?>)</i>
+					<a href="Cart Page.php" style="font-size:24px;color:white" ><li class="fa fa-shopping-cart">(<?php echo $count; ?>)</li>
 				</a>
 				
 				</a>
@@ -441,7 +441,7 @@ window.onscroll=function(){
 		</div>
 	</div>
 	<div class= "copyrights">
-		<i class="Far fa-copyright fa-lx"><i/>2021 By Iffath Raza Chowdhury
+		<i class="Far fa-copyright fa-lx"></i>2021 By Iffath Raza Chowdhury & Jubayer Rahman Shanto   <i class="Far fa-copyright fa-lx"></i>
 </div>
 <!--footer End here-->
 

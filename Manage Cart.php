@@ -6,9 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-</head>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
 <body>
   <?php
@@ -37,7 +35,7 @@
               icon: 'success',
               title: 'Item Added',
               showConfirmButton: false,
-              timer: 1000
+              timer: 1500
             }).then(function() {
               window.history.back();
             });
@@ -53,7 +51,7 @@
             icon: 'success',
             title: 'Item Added',
             showConfirmButton: false,
-            timer: 1000
+            timer: 1500
           }).then(function() {
             window.history.back();
           });
@@ -73,7 +71,7 @@
               'Item has been deleted.',
               'success'
             ).then(function() {
-              window.history.back();
+              window.location = "Cart Page.php";
             })
           </script>
   <?php

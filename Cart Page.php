@@ -1,18 +1,18 @@
 <?php
-	session_start();
-	if (!isset($_SESSION['userName']))
-	{
-		 ?> <A href="Login Page.php" class="button2">Login/SignUp</A> <?php
-	}
-	else {
-		?> <A href="Logout.php" class="button2">LogOut</A> <?php
-		?> <h1 style="font-size: 25px;"><b><?= $_SESSION['userName'] ?></b></h1> <?php
-	}
-	
+session_start();
+if (!isset($_SESSION['userName'])) 
+{
+    ?> <A href="Login Page.php" class="button2">Login/SignUp</A> <?php
+} else
+{
+    ?> <A href="Logout.php" class="button2">LogOut</A> <?php
+    ?> <h1 style="font-size: 25px;"><b><?= $_SESSION['userName'] ?></b></h1> <?php
+}
 ?>
-<html>
 
+<html>
 <head>
+
   <title>Eat Fresh </title>
   <link rel="stylesheet" href="css/Eat_Fresh.css" />
   <link rel="stylesheet" href="css/Login Page.css" />
@@ -62,24 +62,24 @@
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
-      <ul class="cart-btn">
+      <ul class="menu-ul">
         <a href="Cart Page.php">
           <?php
-					$count=0;
-					if(isset($_SESSION['cart']))
-					{
-						$count=count($_SESSION['cart']);
-					}
-					?>
-          <button style="font-size:24px;color:white"><i class="fa fa-shopping-cart">(<?php echo $count; ?>)</i></button>
-        </a>
+          $count = 0;
+          if (isset($_SESSION['cart'])) {
+            $count = count($_SESSION['cart']);
+          }
+          ?>
+          <a href="Cart Page.php" style="font-size:24px;color:white">
+            <li class="fa fa-shopping-cart">(<?php echo $count; ?>)</li>
+          </a>
       </ul>
     </div>
-    	<div class="parallax">
-			<br>
-			<br>
-			<br>
-		</div>
+    <div class="parallax">
+      <br>
+      <br>
+      <br>
+    </div>
     <div class="container border bg-light rounded p-4">
 
       <div class="row">
@@ -147,12 +147,13 @@
   </div>
 
   </div>
-    	<div class="parallax">
-			<br>
-			<br>
-			<br>
-		</div>
+  <div class="parallax">
+    <br>
+    <br>
+    <br>
+  </div>
 
 
 </body>
+
 </html>
