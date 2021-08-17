@@ -136,7 +136,7 @@ window.onscroll=function(){
 					<input type="hidden" name="Weight" value="250g">
 				</div>
 			</form>
-			<form class="items" action="Manage Cart.php" method="POST">
+			<form class="items" action="Manage Cart.php" method="POST" id=iitems>
 				<div class="images">
 					<img src="Images/Vegs/Greenpepper.jpg" class="item-image-size"/>
 				</div>

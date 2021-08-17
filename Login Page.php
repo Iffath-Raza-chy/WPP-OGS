@@ -55,7 +55,7 @@ window.onscroll=function(){
 			<div class="button-box">
 				<div id="btn"></div>
 				<button type="button" class="toggle-btn" onclick="login()">Log In</button>
-				<button type="button" class="toggle-btn"onclick="register()">Register</button>
+				<button type="button" class="toggle-btn" onclick="register()">Register</button>
 			</div>
 			<div class="social-icons">
 				<img src="Images/Png/fb.png">
@@ -69,6 +69,8 @@ window.onscroll=function(){
 				<button type="submit" class="submit-btn" name="Login" >Log in</button>
 			</form>
 			<form method = "post" action="registration.php" id="register" class="input-group">
+				
+				<input type="text" class="input-feild" placeholder="Full Name" name = "Fullname" required>
 				<input type="text" class="input-feild" placeholder="User ID" name = "userName" required>
 				<input type="email" class="input-feild" placeholder="Email ID" name = "userEmail"  required>
 				<input type="text" class="input-feild" placeholder="Enter Password" name = "userPassword" required>
