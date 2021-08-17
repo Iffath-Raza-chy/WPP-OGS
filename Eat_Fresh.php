@@ -69,6 +69,12 @@ window.onscroll=function(){
 </nav>
 <!--Home Page Begins-->
 	<div class="containerh">
+	<a href="#deals">
+			<div class="categories">
+				<img src="images/Types/Deals.jpg" class="item-image"/>
+				<div class ="image-title">Deals</div>
+			</div>
+		</a>
 		<a href="#vegetables">
 			<div class="categories">
 				<img src="images/Types/Vegetables.jpg" class="item-image"/>
@@ -85,12 +91,6 @@ window.onscroll=function(){
 			<div class="categories">
 				<img src="images/Types/Meats&Seafoods.jpg" class="item-image"/>
 				<div class ="image-title">Meat & Seafood</div>
-			</div>
-		</a>
-		<a href="#deals">
-			<div class="categories">
-				<img src="images/Types/Deals.jpg" class="item-image"/>
-				<div class ="image-title">Deals</div>
 			</div>
 		</a>
 	</div>

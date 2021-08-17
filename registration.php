@@ -48,8 +48,8 @@
   } else if ($num2 == 1) {
   ?>
     <script>
-      swal.fire("Email Already Taken!",
-        "Please Enter Another Email Address",
+      swal.fire("Email Id Already Registered!",
+        "Please Enter Another Email Address or Login",
         "warning").then(function() {
         window.location = "Login Page.php";
       });
@@ -62,7 +62,7 @@
   ?>
     <script>
       swal.fire("Registration Success!",
-        "Redirect o Login Page!",
+        "Redirect to Login Page!",
         "success").then(function() {
         window.location = "Login Page.php";
       });
